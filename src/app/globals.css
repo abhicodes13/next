@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #373737;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1c1b1b;
     --foreground: #ededed;
   }
 }
@@ -23,4 +23,18 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  background-color: black;
+  padding: 4px;
+
+  margin-top: 10px;
+  display: block;
+}
+button:hover {
+  background-color: aqua;
+  color: black;
+}
+input {
+  background-color: black;
 }
