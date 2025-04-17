@@ -17,14 +17,14 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.models.users || mongoose.model("users", userSchema);
 
 export async function GET() {
-  const allUsers = await user.find();
+  const allUsers = await User.find();
   //const username = allUsers.map((user) => user.name);
   return new Response(JSON.stringify(allUsers));
 }
 
 export async function POST(req) {
   const { name, email } = await req.json();
-  const newUser = await user.create({ name, email });
+  const newUser = await User.create({ name, email });
 
   return new Response(JSON.stringify(newUser));
 }
