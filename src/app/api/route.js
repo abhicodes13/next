@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
   email: String,
 });
 
-const user = mongoose.models.users;
+const User = mongoose.models.users || mongoose.model("users", userSchema);
 
 export async function GET() {
   const allUsers = await user.find();
