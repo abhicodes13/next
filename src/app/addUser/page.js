@@ -17,7 +17,6 @@ const page = () => {
         {
           name,
           email,
-          role: "user", // Optional default role
         }
       );
       console.log("User added:", response.data);
