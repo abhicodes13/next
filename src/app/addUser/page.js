@@ -26,7 +26,10 @@ const page = () => {
     }
   }
   return (
-    <div>
+    <div
+      className="flex justify-center items-center gap-4
+    "
+    >
       Add a new POST
       <br />
       <br />
