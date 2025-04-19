@@ -6,7 +6,9 @@ export default function Home() {
   const [users, setUsers] = useState([]);
   async function getUsers() {
     try {
-      const response = await axios.get(process.env.NEXT_PUBLIC_API);
+      const response = await axios.get(
+        "https://next-ruby-psi-84.vercel.app/api"
+      );
       setUsers(response.data);
     } catch (error) {
       console.log(error);

@@ -12,10 +12,13 @@ const page = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(process.env.NEXT_PUBLIC_API, {
-        name,
-        email,
-      });
+      const response = await axios.post(
+        "https://next-ruby-psi-84.vercel.app/api",
+        {
+          name,
+          email,
+        }
+      );
       console.log("User added:", response.data);
       router.push("/");
     } catch (error) {
