@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-async function run() {
+export async function run() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
   } catch (error) {
