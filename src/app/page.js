@@ -14,6 +14,13 @@ export default function Home() {
       console.log(error);
     }
   }
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`https://next-ruby-psi-84.vercel.app/api/${id}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     getUsers(); // Call only once when component mounts
@@ -27,6 +34,7 @@ export default function Home() {
         {users.map((user) => (
           <li key={user.id}>
             <strong>{user.name || "Unnamed"}</strong> - {user.email}
+            <button onClick={() => handleDelete(user._id)}>Remove</button>
           </li>
         ))}
       </ul>
