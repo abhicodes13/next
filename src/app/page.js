@@ -17,7 +17,7 @@ export default function Home() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://next-ruby-psi-84.vercel.app/api/${id}`);
-      getUsers();
+      setUsers(users.filter((user) => user._id !== id));
     } catch (error) {
       console.log(error);
     }
