@@ -1,3 +1,4 @@
+import { User } from "../route";
 export async function DELETE(req, { params }) {
   const { id } = await params;
   try {
