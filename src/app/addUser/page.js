@@ -12,7 +12,7 @@ const page = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(process.env.API, {
+      const response = await axios.post(process.env.FETCH_API, {
         name,
         email,
       });

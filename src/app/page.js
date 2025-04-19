@@ -6,7 +6,7 @@ export default function Home() {
   const [users, setUsers] = useState([]);
   async function getUsers() {
     try {
-      const response = await axios.get(process.env.API);
+      const response = await axios.get(process.env.FETCH_API);
       setUsers(response.data);
     } catch (error) {
       console.log(error);
